@@ -13,8 +13,11 @@ public class ftl {
 
         cat catvar = new cat();
         catvar.voice();
-        cat barsik = new cat();
-        
+
+
+        L004.cat catL004 = new L004.cat();
+        catL004.voice();
+
 
 
 
