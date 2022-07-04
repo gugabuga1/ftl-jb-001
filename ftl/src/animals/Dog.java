@@ -29,5 +29,10 @@ public class Dog extends animal{
         dog.weight = weight;
         return dog;
     }
+    @Override
+    public void voice(){
+        System.out.println("wow");
+
+    }
 
 }
