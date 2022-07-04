@@ -24,5 +24,11 @@ public class Cat extends animal {
 
 
     }
+    @Override
+    public void voice(){
+        System.out.println("mey");
+
+    }
+
 
 }
