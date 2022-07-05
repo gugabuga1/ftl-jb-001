@@ -8,4 +8,11 @@ public class Duck extends Bird{
     public void voice(){
         System.out.println("quack");
     }
+    public void showSpeed(){
+        if(this.FlyModeActive == true) {
+            System.out.println("40");
+        }else{
+            System.out.println("4");
+        }
+    }
 }
