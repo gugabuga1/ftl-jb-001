@@ -36,10 +36,14 @@ public class ftl {
         homelessDog.voice();
         Duck duck = new Duck();
         duck.voice();
+
         duck.takeOff();
         duck.isTheBridFlying();
+        duck.showSpeed();
+
         duck.landing();
         duck.isTheBridFlying();
+        duck.showSpeed();
 
 
 
