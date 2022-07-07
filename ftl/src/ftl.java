@@ -45,6 +45,24 @@ public class ftl {
         duck.isTheBridFlying();
         duck.showSpeed();
 
+        Dog[] dogsHomelles =  new Dog[]{
+                Dog.ofHomeless(2),
+                Dog.ofHomeless(3),
+                Dog.ofHomeless(5),
+        };
+        System.out.println(dogsHomelles.length);
+        System.out.println(dogsHomelles[0]);
+        System.out.println(dogsHomelles[1]);
+        System.out.println(dogsHomelles[2]);
+
+        Dog[] dogs = Dog.randomArray();
+        System.out.println(dogs[0]);
+        System.out.println(dogs[1]);
+        System.out.println(dogs[2]);
+
+
+
+
 
 
 
