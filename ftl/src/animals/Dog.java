@@ -2,6 +2,8 @@ package animals;
 
 import javax.naming.Name;
 import javax.xml.namespace.QName;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Dog extends animal{
     public Dog(String name, Integer weight) {
@@ -10,11 +12,13 @@ public class Dog extends animal{
 
     public Dog() {
     }
-   public static Dog[] randomArray(){
-        Dog[] dogs = new Dog[3];
-        dogs[0] = Dog.of("Sharick", 3);
-        dogs[1] = Dog.of("Bubble", 1);
-        dogs[2] = Dog.of("Tuzik", 5);
+   public static List<Dog> randomArray(){
+        List<Dog> dogs = new ArrayList<>();
+
+        dogs.add(Dog.of("Sharick", 3));
+        dogs.add(Dog.of("Bubble", 1));
+        dogs.add(Dog.of("Tuzik", 5));
+
         return dogs;
 
    }

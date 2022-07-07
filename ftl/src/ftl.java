@@ -2,6 +2,9 @@ import animals.Cat;
 import animals.Dog;
 import animals.Duck;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ftl {
     public static void main(String... args) {
 //        HelloWorld.run();
@@ -45,20 +48,19 @@ public class ftl {
         duck.isTheBridFlying();
         duck.showSpeed();
 
-        Dog[] dogsHomelles =  new Dog[]{
+        List<Dog> dogsHomelles = Arrays.asList(new Dog[]{
                 Dog.ofHomeless(2),
                 Dog.ofHomeless(3),
                 Dog.ofHomeless(5),
-        };
-        System.out.println(dogsHomelles.length);
-        System.out.println(dogsHomelles[0]);
-        System.out.println(dogsHomelles[1]);
-        System.out.println(dogsHomelles[2]);
-
-        Dog[] dogs = Dog.randomArray();
-        System.out.println(dogs[0]);
-        System.out.println(dogs[1]);
-        System.out.println(dogs[2]);
+        });
+        System.out.println(dogsHomelles.size());
+        System.out.println(dogsHomelles.get(0));
+        System.out.println(dogsHomelles.get(1));
+        System.out.println(dogsHomelles.get(2));
+        List<Dog> dogs = Dog.randomArray();
+        System.out.println(dogs.get(0));
+        System.out.println(dogs.get(1));
+        System.out.println(dogs.get(2));
 
 
 
