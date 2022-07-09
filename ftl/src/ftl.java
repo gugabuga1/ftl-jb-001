@@ -1,3 +1,4 @@
+import L013.SwitchExample;
 import animals.Cat;
 import animals.Dog;
 import animals.Duck;
@@ -74,6 +75,10 @@ public class ftl {
         while (IndexLinkedList < dogsLinkenList.size()){
             System.out.println(dogsLinkenList.get(IndexLinkedList));
             IndexLinkedList++;
+
+        }
+        for(int i = 0; i < 5; i++){
+            SwitchExample.run();
         }
 
 
