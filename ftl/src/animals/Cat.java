@@ -6,7 +6,8 @@ public class Cat extends animal {
     }
 
     public Cat() {
-        this.canFly = false;
+        super();
+
 
 
     }

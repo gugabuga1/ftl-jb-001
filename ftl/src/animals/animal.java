@@ -9,9 +9,11 @@ package animals;
     public animal(String name, Integer weight) {
         this.name = name;
         this.weight = weight;
+        this.canFly = false;
     }
 
     public animal() {
+        this.canFly = false;
     }
 
     public void voice(){
