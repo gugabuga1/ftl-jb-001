@@ -20,4 +20,12 @@ public class Bird extends animal{
         );
 
     }
+
+    public Boolean getFlyModeActive() {
+        return FlyModeActive;
+    }
+
+    public void setFlyModeActive(Boolean flyModeActive) {
+        FlyModeActive = flyModeActive;
+    }
 }

@@ -63,6 +63,7 @@ public class ftl {
         System.out.println(dogsHomelles.size());
         for(Dog dogItem : dogsHomelles){
            System.out.println(dogItem);
+           System.out.println(dogItem.getName());
         }
         List<Dog> dogsLinkenList = new LinkedList<>();
         dogsLinkenList.add(Dog.ofHomeless(10));
@@ -78,7 +79,7 @@ public class ftl {
 
         }
         for(int i = 0; i < 5; i++){
-            SwitchExample.run();
+           // SwitchExample.run();
         }
             duck.canFly = true;
 
