@@ -1,5 +1,6 @@
 import L013.SwitchExample;
 import L019.StringExample;
+import L020.TypeConversion;
 import animals.Cat;
 import animals.Dog;
 import animals.Duck;
@@ -29,7 +30,6 @@ public class ftl {
         cat.voice();
 
 
-
         Dog dog = new Dog();
         dog.gotostick(14);
         dog.whereTheDog();
@@ -53,7 +53,7 @@ public class ftl {
         duck.showSpeed();
 
         List<Dog> dogs = Dog.randomArray();
-        for (int i = 0; i< dogs.size(); i++) {
+        for (int i = 0; i < dogs.size(); i++) {
             System.out.println(dogs.get(i));
 
         }
@@ -63,9 +63,9 @@ public class ftl {
                 Dog.ofHomeless(5),
         });
         System.out.println(dogsHomelles.size());
-        for(Dog dogItem : dogsHomelles){
-           System.out.println(dogItem);
-           System.out.println(dogItem.getName());
+        for (Dog dogItem : dogsHomelles) {
+            System.out.println(dogItem);
+            System.out.println(dogItem.getName());
         }
         List<Dog> dogsLinkenList = new LinkedList<>();
         dogsLinkenList.add(Dog.ofHomeless(10));
@@ -75,38 +75,32 @@ public class ftl {
         dogsLinkenList.add(Dog.ofHomeless(10));
 
         int IndexLinkedList = 0;
-        while (IndexLinkedList < dogsLinkenList.size()){
+        while (IndexLinkedList < dogsLinkenList.size()) {
             System.out.println(dogsLinkenList.get(IndexLinkedList));
             IndexLinkedList++;
 
         }
-        for(int i = 0; i < 5; i++){
-           // SwitchExample.run();
+        for (int i = 0; i < 5; i++) {
+            // SwitchExample.run();
         }
         System.out.println(duck.getMoveType());
         System.out.println(dog.getMoveType().getValue());
 
-        if(dog.getMoveType() == MoveType.WALK)
+        if (dog.getMoveType() == MoveType.WALK)
             System.out.println("Может ходить");
-        StringExample.run();
 
 
 
 
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-
+        TypeConversion.run();
     }
+
+}
+
+
+
+
+
+
 
 
