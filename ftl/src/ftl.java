@@ -2,6 +2,7 @@ import L013.SwitchExample;
 import animals.Cat;
 import animals.Dog;
 import animals.Duck;
+import animals.MoveType;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -81,7 +82,12 @@ public class ftl {
         for(int i = 0; i < 5; i++){
            // SwitchExample.run();
         }
-            duck.canFly = true;
+        System.out.println(duck.getMoveType());
+        System.out.println(dog.getMoveType().getValue());
+
+        if(dog.getMoveType() == MoveType.WALK)
+            System.out.println("Может ходить");
+
 
 
 
