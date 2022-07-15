@@ -1,6 +1,6 @@
 package animals;
 
-public class Bird extends animal implements Flight{
+public abstract class Bird extends animal implements Flight{
     protected Boolean FlyModeActive = false;
 
     public Bird() {
