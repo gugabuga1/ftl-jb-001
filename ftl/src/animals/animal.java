@@ -4,16 +4,16 @@ package animals;
     protected String name;
     protected Integer weight;
     protected Integer currentPosition = 0;
-    public Boolean canFly = false;
+    public MoveType moveType;
 
-    public animal(String name, Integer weight) {
+    public animal(String name, Integer weight, MoveType moveType) {
         this.name = name;
         this.weight = weight;
-        this.canFly = false;
+        this.moveType = moveType;
     }
 
-    public animal() {
-        this.canFly = false;
+    public animal(MoveType moveType) {
+        this.moveType = moveType;
     }
 
     public void voice(){
@@ -50,11 +50,12 @@ package animals;
          this.currentPosition = currentPosition;
      }
 
-     public Boolean getCanFly() {
-         return canFly;
+     public MoveType getMoveType() {
+         return moveType;
      }
 
-     public void setCanFly(Boolean canFly) {
-         this.canFly = canFly;
+     public void setMoveType(MoveType moveType) {
+         this.moveType = moveType;
      }
  }
+

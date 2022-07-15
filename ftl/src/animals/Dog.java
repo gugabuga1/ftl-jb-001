@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Dog extends animal{
     public Dog(String name, Integer weight) {
-        super(name, weight);
+        super(name, weight,MoveType.WALK);
     }
 
     public Dog() {
-        super();
+        super(MoveType.WALK);
 
     }
    public static List<Dog> randomArray(){
