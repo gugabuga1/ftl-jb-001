@@ -1,6 +1,6 @@
 package animals;
 
-public class Bird extends animal{
+public class Bird extends animal implements Flight{
     protected Boolean FlyModeActive = false;
 
     public Bird() {
@@ -8,12 +8,19 @@ public class Bird extends animal{
 
     }
 
-    public  final void takeOff(){
-        FlyModeActive = true;
+    @Override
+    public void takeoff() {
+        this.FlyModeActive = true;
+
+
     }
-    public final void landing(){
-        FlyModeActive = false;
+
+    @Override
+    public void landing() {
+        this.FlyModeActive = false;
+
     }
+
     public void isTheBridFlying(){
         System.out.println(
                 this.FlyModeActive == true ? "Duck: flying mode - yes" : "Duck: flying mode - no"

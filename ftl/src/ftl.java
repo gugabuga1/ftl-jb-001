@@ -44,7 +44,7 @@ public class ftl {
         Duck duck = new Duck();
         duck.voice();
 
-        duck.takeOff();
+
         duck.isTheBridFlying();
         duck.showSpeed();
 
