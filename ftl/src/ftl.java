@@ -8,14 +8,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ftl {
-    public static void main(String... args)
+    public static void main(String... args) {
+
+    }
     {
 //        HelloWorld.run();
 //        POJO.run();
-//
-//
-//
-//
 //
 //        cat catvar = new cat();
 //        catvar.voice();
@@ -91,6 +89,15 @@ public class ftl {
 
 
         TypeConversion.run();
+        StringExample.run();
+        dog.setWeight(new animal.AnimalWeight( 10,animal.AnimalWeight.WeightType.KG));
+        try{
+        dog.getWeight().setValue(-10);}catch(animal.WeightException e) {
+            e.printStackTrace();
+        }
+
+
+
     }
 
 }
