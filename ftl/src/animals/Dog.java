@@ -1,13 +1,11 @@
 package animals;
 
-import javax.naming.Name;
-import javax.xml.namespace.QName;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Dog extends animal{
-    public Dog(String name, Integer weight) {
-        super(name, weight,MoveType.WALK);
+    public Dog(String name, AnimalWeight weigh) {
+        super(name, weight, MoveType.WALK);
     }
 
     public Dog() {
@@ -17,9 +15,9 @@ public class Dog extends animal{
    public static List<Dog> randomArray(){
         List<Dog> dogs = new ArrayList<>();
 
-        dogs.add(Dog.of("Sharick", 3));
-        dogs.add(Dog.of("Bubble", 1));
-        dogs.add(Dog.of("Tuzik", 5));
+        dogs.add(Dog.of("Sharick", new AnimalWeight(3, AnimalWeight.WeightType.KG)));
+        dogs.add(Dog.of("Bubble", new AnimalWeight(1, AnimalWeight.WeightType.KG)));
+        dogs.add(Dog.of("Tuzik", new AnimalWeight(5, AnimalWeight.WeightType.KG)));
 
         return dogs;
 
@@ -39,11 +37,11 @@ public class Dog extends animal{
     public void whereTheDog(){
         System.out.println(this.currentPosition);
     }
-    public static Dog of(String name, Integer weight) {
+    public static Dog of(String name, AnimalWeight weight) {
         return new Dog(name, weight);
 
     }
-    public static Dog ofHomeless(Integer weight) {
+    public static Dog ofHomeless(AnimalWeight weight) {
         Dog dog = new Dog();
         dog.weight = weight;
         return dog;
