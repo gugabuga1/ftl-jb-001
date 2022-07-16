@@ -8,7 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ftl {
-    public static void main(String... args) {
+    public static void main(String... args)
+    {
 //        HelloWorld.run();
 //        POJO.run();
 //
@@ -22,7 +23,7 @@ public class ftl {
 //
 //        L004.cat catL004 = new L004.cat();
 //        catL004.voice();
-        Cat cat = new Cat("Barsik",new animal.AnimalWeight(3,animal.AnimalWeight.WeightType.KG));
+        Cat cat = new Cat("Barsik", new  animal.AnimalWeight(3,animal.AnimalWeight.WeightType.KG));
         System.out.println(cat.jumpHeight());
         cat.voice();
 
