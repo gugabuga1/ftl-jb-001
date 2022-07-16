@@ -2,7 +2,7 @@ package animals;
 
 public class Cat extends animal {
     public Cat(String name, Integer weight) {
-        super(name, weight,MoveType.WALK);
+        super(name, weight, MoveType.WALK);
     }
 
     public Cat() {
@@ -12,8 +12,11 @@ public class Cat extends animal {
 
     }
 
-    private Integer heightcoefficient(Integer weight){
-        if(weight > 10){
+
+
+
+    private Integer heightcoefficient(AnimalWeight weight){
+        if(weight.getValue() > 10){
             return 120;
 
         }
