@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dog extends animal{
-    public Dog(String name, AnimalWeight weigh) {
-        super(name, weight, MoveType.WALK);
+    public Dog(String name, AnimalWeight weight) {
+        super(name, weight.getValue(), MoveType.WALK);
     }
 
     public Dog() {

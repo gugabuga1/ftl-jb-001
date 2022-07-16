@@ -1,8 +1,8 @@
 package animals;
 
 public class Cat extends animal {
-    public Cat(String name, Integer weight) {
-        super(name, weight, MoveType.WALK);
+    public Cat(String name, AnimalWeight weight) {
+        super(name, weight.getValue(), MoveType.WALK);
     }
 
     public Cat() {
