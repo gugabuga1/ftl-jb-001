@@ -1,8 +1,10 @@
 import L013.SwitchExample;
 import L019.StringExample;
 import L020.TypeConversion;
+import L026.FileExample;
 import animals.*;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -97,6 +99,11 @@ public class ftl {
         }
 
 
+        try {
+            FileExample.run();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
