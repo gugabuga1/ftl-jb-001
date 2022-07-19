@@ -5,16 +5,15 @@ import java.util.List;
 
 public class Dog extends animal{
     public Dog(String name, AnimalWeight weight) {
-        super(name, weight.getValue(), MoveType.WALK);
+        super(name, weight, MoveType.WALK);
     }
 
     public Dog() {
         super(MoveType.WALK);
 
     }
-   public static List<Dog> randomArray(){
+   public static List<Dog> randomArray() {
         List<Dog> dogs = new ArrayList<>();
-
         try {
 
 
@@ -23,8 +22,9 @@ public class Dog extends animal{
             dogs.add(Dog.of("Tuzik", new AnimalWeight(5, AnimalWeight.WeightType.KG)));
         }catch (WeightException e){
             e.printStackTrace();
-
         }
+
+
 
         return dogs;
 

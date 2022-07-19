@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ftl {
-    public static void main(String... args) {
+    public static void main(String... args) throws IOException {
 
     }
 
@@ -101,11 +101,13 @@ public class ftl {
         dog.setWeight(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG));
         try {
             dog.getWeight().setValue(-10);
-        }catch (animal.WeightException ignore){
+        }catch (animal.WeightException ignore) {
         }
+        FileExample.run();
 
 
         ThreadExample.run();
+        
 
 
         House house = new House.Builder()

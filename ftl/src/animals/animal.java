@@ -18,6 +18,14 @@ public abstract class animal {
             this.weightType = weightType;
         }
 
+        @Override
+        public String toString() {
+            return "AnimalWeight{" +
+                    "value=" + value +
+                    ", weightType=" + weightType +
+                    '}';
+        }
+
         public Integer getValue() {
             return value;
         }
@@ -40,7 +48,7 @@ public abstract class animal {
     protected Integer currentPosition = 0;
     public MoveType moveType;
 
-    public animal(String name, Integer AnimalWeight, MoveType moveType) {
+    public animal(String name, AnimalWeight weight, MoveType moveType) {
         this.name = name;
         this.weight = weight;
         this.moveType = moveType;
