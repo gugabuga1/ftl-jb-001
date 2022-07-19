@@ -2,8 +2,11 @@ import L013.SwitchExample;
 import L019.StringExample;
 import L020.TypeConversion;
 import L026.FileExample;
+import L027.ThreadExample;
+import L028.House;
 import animals.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -13,6 +16,7 @@ public class ftl {
     public static void main(String... args) {
 
     }
+
     {
 //        HelloWorld.run();
 //        POJO.run();
@@ -23,7 +27,7 @@ public class ftl {
 //
 //        L004.cat catL004 = new L004.cat();
 //        catL004.voice();
-        Cat cat = new Cat("Barsik", new  animal.AnimalWeight(3,animal.AnimalWeight.WeightType.KG));
+        Cat cat = new Cat("Barsik", new animal.AnimalWeight(3, animal.AnimalWeight.WeightType.KG));
         System.out.println(cat.jumpHeight());
         cat.voice();
 
@@ -37,7 +41,7 @@ public class ftl {
         dog.whereTheDog();
         dog.voice();
 
-        Dog homelessDog = Dog.ofHomeless(new animal.AnimalWeight(100,animal.AnimalWeight.WeightType.KG));
+        Dog homelessDog = Dog.ofHomeless(new animal.AnimalWeight(100, animal.AnimalWeight.WeightType.KG));
         homelessDog.voice();
         Duck duck = new Duck();
         duck.voice();
@@ -56,9 +60,9 @@ public class ftl {
 
         }
         List<Dog> dogsHomelles = Arrays.asList(new Dog[]{
-                Dog.ofHomeless(new animal.AnimalWeight(3,animal.AnimalWeight.WeightType.KG)),
-                Dog.ofHomeless(new animal.AnimalWeight(3,animal.AnimalWeight.WeightType.KG)),
-                Dog.ofHomeless(new animal.AnimalWeight(5,animal.AnimalWeight.WeightType.KG))
+                Dog.ofHomeless(new animal.AnimalWeight(3, animal.AnimalWeight.WeightType.KG)),
+                Dog.ofHomeless(new animal.AnimalWeight(3, animal.AnimalWeight.WeightType.KG)),
+                Dog.ofHomeless(new animal.AnimalWeight(5, animal.AnimalWeight.WeightType.KG))
         });
         System.out.println(dogsHomelles.size());
         for (Dog dogItem : dogsHomelles) {
@@ -66,11 +70,11 @@ public class ftl {
             System.out.println(dogItem.getName());
         }
         List<Dog> dogsLinkenList = new LinkedList<>();
-        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10,animal.AnimalWeight.WeightType.KG)));
-        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10,animal.AnimalWeight.WeightType.KG)));
-        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10,animal.AnimalWeight.WeightType.KG)));
-        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10,animal.AnimalWeight.WeightType.KG)));
-        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10,animal.AnimalWeight.WeightType.KG)));
+        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG)));
+        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG)));
+        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG)));
+        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG)));
+        dogsLinkenList.add(Dog.ofHomeless(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG)));
 
         int IndexLinkedList = 0;
         while (IndexLinkedList < dogsLinkenList.size()) {
@@ -84,30 +88,49 @@ public class ftl {
         System.out.println(duck.getMoveType());
         System.out.println(dog.getMoveType().getValue());
 
-        if (dog.getMoveType() == MoveType.WALK)
+        if (dog.getMoveType() == MoveType.WALK){
             System.out.println("Может ходить");
-
-
+        }
 
 
         TypeConversion.run();
         StringExample.run();
-        dog.setWeight(new animal.AnimalWeight( 10,animal.AnimalWeight.WeightType.KG));
-        try{
-        dog.getWeight().setValue(-10);}catch(animal.WeightException e) {
-            e.printStackTrace();
-        }
 
 
+
+        dog.setWeight(new animal.AnimalWeight(10, animal.AnimalWeight.WeightType.KG));
         try {
-            FileExample.run();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+            dog.getWeight().setValue(-10);
+        }catch (animal.WeightException ignore){
         }
+
+
+        ThreadExample.run();
+
+
+        House house = new House.Builder()
+                .optHasFancyStatues(true)
+                .build();
+        System.out.println(house.toString());
+        House houseFull = new House.Builder()
+                .optHasFancyStatues(true)
+                .optHasGarage(true)
+                .optHasSwimmingPool(true)
+                .optHasGarden(true)
+                .build();
+        System.out.println(houseFull.toString());
+
 
     }
-
 }
+
+
+
+
+
+
+
+
 
 
 
